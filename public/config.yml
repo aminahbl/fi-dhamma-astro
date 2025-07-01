@@ -1,5 +1,6 @@
 backend:
   name: git-gateway
+  repo: "aminahbl/fi-dhamma-astro"
   branch: main
 
 media_folder: "public/images/uploads"
@@ -45,21 +46,46 @@ collections:
         widget: "object"
         fields:
           - { label: "Title", name: "title", widget: "string", i18n: true }
-          - { label: "Subtitle", name: "subtitle", widget: "string", i18n: true }
+          - {
+              label: "Subtitle",
+              name: "subtitle",
+              widget: "string",
+              i18n: true,
+            }
       - label: "About Page"
         name: "about"
         widget: "object"
         fields:
           - { label: "Title", name: "title", widget: "string", i18n: true }
-          - { label: "Subtitle", name: "subtitle", widget: "string", i18n: true }
+          - {
+              label: "Subtitle",
+              name: "subtitle",
+              widget: "string",
+              i18n: true,
+            }
       - label: "Events Page"
         name: "events"
         widget: "object"
         fields:
           - { label: "Title", name: "title", widget: "string", i18n: true }
-          - { label: "Subtitle", name: "subtitle", widget: "string", i18n: true }
-          - { label: "Read More", name: "readMore", widget: "string", i18n: true }
-          - { label: "Back to Events", name: "backToEvents", widget: "string", i18n: true }
+          - {
+              label: "Subtitle",
+              name: "subtitle",
+              widget: "string",
+              i18n: true,
+            }
+          - {
+              label: "Read More",
+              name: "readMore",
+              widget: "string",
+              i18n: true,
+            }
+          - {
+              label: "Back to Events",
+              name: "backToEvents",
+              widget: "string",
+              i18n: true,
+            }
 
   - name: "pages"
     label: "Pages"
@@ -92,5 +118,10 @@ collections:
       - { label: "Slug", name: "slug", widget: "string", i18n: "duplicate" }
       - { label: "Date", name: "date", widget: "datetime", i18n: "duplicate" }
       - { label: "Excerpt", name: "excerpt", widget: "text", i18n: true }
-      - { label: "Language", name: "lang", widget: "hidden", default: "{{locale}}" }
+      - {
+          label: "Language",
+          name: "lang",
+          widget: "hidden",
+          default: "{{locale}}",
+        }
       - { label: "Body", name: "body", widget: "markdown", i18n: true }
