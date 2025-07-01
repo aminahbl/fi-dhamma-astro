@@ -20,7 +20,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 
-const { Content } = await event.render();
+const Content = event.Content;
 ---
 
 <Layout title={event.frontmatter.title}>
