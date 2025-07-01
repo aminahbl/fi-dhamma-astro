@@ -1,9 +1,9 @@
 ---
-title: "Esimerkkitapahtuma"
-slug: "sample-event"
-date: "2024-08-15"
-excerpt: "Tämä on esimerkkitapahtuma, joka esittelee tapahtumien toiminnallisuutta."
-lang: "fi"
+title: Esimerkkitapahtuma
+slug: sample-event
+date: 2024-08-15
+excerpt: Tämä on esimerkkitapahtuma, joka esittelee tapahtumien toiminnallisuutta.
+lang: fi
 ---
 
 # Esimerkkitapahtuma
@@ -21,3 +21,5 @@ Tämä on esimerkkitapahtuma, joka on luotu esittelemään monikielisen sivustom
 Liity mukaan tähän jännittävään esimerkkitapahtumaan, jossa esittelemme sisällönhallintajärjestelmämme ja monikielisen tuen ominaisuuksia.
 
 Tämä sisältö on täysin muokattavissa Decap CMS -käyttöliittymän kautta, mikä mahdollistaa tapahtumien helpon hallinnan sekä englanniksi että suomeksi.
+
+![pikku elefanti](https://pethelpful.com/.image/c_fill,g_faces:center/NDowMDAwMDAwMDAwMDk5NTMy/baby-elephant-in-grass.jpg)
