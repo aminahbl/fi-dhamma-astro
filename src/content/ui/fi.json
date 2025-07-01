@@ -1,0 +1,24 @@
+{
+  "site": {
+    "title": "Dharna Suomi"
+  },
+  "nav": {
+    "home": "Koti",
+    "about": "Tietoa",
+    "events": "Tapahtumat"
+  },
+  "home": {
+    "title": "Tervetuloa",
+    "subtitle": "Dharna Suomi - Meditaatio ja henkinen kasvu"
+  },
+  "about": {
+    "title": "Tietoa meistä",
+    "subtitle": "Tutustu meihin ja toimintaamme"
+  },
+  "events": {
+    "title": "Tapahtumat",
+    "subtitle": "Tulevat tapahtumat ja kurssit",
+    "readMore": "Lue lisää",
+    "backToEvents": "Takaisin tapahtumiin"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "en": {
+    "content": "This is the about page content. It can be edited through the CMS.\n\nLearn more about our organization, mission, and values here. We are committed to providing excellent multilingual web experiences using modern technologies like Astro and Decap CMS.\n\n## Our Mission\n\nTo create accessible, multilingual web experiences that serve diverse communities.\n\n## Our Values\n\n- **Accessibility**: Making content available to everyone\n- **Multilingual Support**: Breaking down language barriers\n- **Modern Technology**: Using cutting-edge tools for the best experience"
+  },
+  "fi": {
+    "content": "Tämä on tietoa-sivun sisältö. Sitä voi muokata CMS:n kautta.\n\nLue lisää organisaatiostamme, missiostamme ja arvoistamme täältä. Olemme sitoutuneet tarjoamaan erinomaisia monikielisiä verkkokokemuksia käyttäen moderneja teknologioita kuten Astro ja Decap CMS.\n\n## Missiomme\n\nLuoda saavutettavia, monikielisiä verkkokokemuksia, jotka palvelevat monimuotoisia yhteisöjä.\n\n## Arvomme\n\n- **Saavutettavuus**: Sisällön saatavuus kaikille\n- **Monikielinen tuki**: Kielimuurien murtaminen\n- **Moderni teknologia**: Huippuluokan työkalujen käyttö parhaan kokemuksen saamiseksi"
+  }
+}

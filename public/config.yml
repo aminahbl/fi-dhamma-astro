@@ -1,0 +1,85 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+i18n:
+  structure: multiple_folders
+  locales: [fi, en]
+  default_locale: fi
+
+collections:
+  - name: "ui"
+    label: "UI Translations"
+    folder: "src/content/ui"
+    create: false
+    slug: "{{locale}}"
+    i18n:
+      structure: single_file
+      locales: [fi, en]
+      default_locale: fi
+    fields:
+      - label: "Site"
+        name: "site"
+        widget: "object"
+        fields:
+          - { label: "Title", name: "title", widget: "string", i18n: true }
+      - label: "Navigation"
+        name: "nav"
+        widget: "object"
+        fields:
+          - { label: "Home", name: "home", widget: "string", i18n: true }
+          - { label: "About", name: "about", widget: "string", i18n: true }
+          - { label: "Events", name: "events", widget: "string", i18n: true }
+      - label: "Home Page"
+        name: "home"
+        widget: "object"
+        fields:
+          - { label: "Title", name: "title", widget: "string", i18n: true }
+          - { label: "Subtitle", name: "subtitle", widget: "string", i18n: true }
+      - label: "About Page"
+        name: "about"
+        widget: "object"
+        fields:
+          - { label: "Title", name: "title", widget: "string", i18n: true }
+          - { label: "Subtitle", name: "subtitle", widget: "string", i18n: true }
+      - label: "Events Page"
+        name: "events"
+        widget: "object"
+        fields:
+          - { label: "Title", name: "title", widget: "string", i18n: true }
+          - { label: "Subtitle", name: "subtitle", widget: "string", i18n: true }
+          - { label: "Read More", name: "readMore", widget: "string", i18n: true }
+          - { label: "Back to Events", name: "backToEvents", widget: "string", i18n: true }
+
+  - name: "pages"
+    label: "Pages"
+    folder: "src/content/pages"
+    create: false
+    slug: "{{fields.slug}}"
+    i18n:
+      structure: multiple_folders
+      locales: [fi, en]
+      default_locale: fi
+    fields:
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Content", name: "content", widget: "markdown", i18n: true }
+
+  - name: "events"
+    label: "Events"
+    folder: "src/content/events"
+    create: true
+    slug: "{{slug}}"
+    i18n:
+      structure: multiple_folders
+      locales: [fi, en]
+      default_locale: fi
+    fields:
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Slug", name: "slug", widget: "string", i18n: "duplicate" }
+      - { label: "Date", name: "date", widget: "datetime", i18n: "duplicate" }
+      - { label: "Excerpt", name: "excerpt", widget: "text", i18n: true }
+      - { label: "Language", name: "lang", widget: "hidden", default: "{{locale}}" }
+      - { label: "Body", name: "body", widget: "markdown", i18n: true }

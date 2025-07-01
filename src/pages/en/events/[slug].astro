@@ -1,0 +1,49 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import {
+	getLangFromUrl,
+	useTranslations,
+	useTranslatedPath,
+} from "../../../i18n/utils";
+
+export async function getStaticPaths() {
+	const events = await Astro.glob("/src/content/events/en/*.md");
+
+	return events.map((event) => ({
+		params: { slug: event.frontmatter.slug },
+		props: { event },
+	}));
+}
+
+const { event } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+
+const { Content } = await event.render();
+---
+
+<Layout title={event.frontmatter.title}>
+	<article>
+		<div class="mb-8">
+			<a
+				href={translatePath("/events")}
+				class="inline-flex items-center text-blue-500 hover:text-blue-600 mb-4"
+			>
+				← {t("events.backToEvents")}
+			</a>
+			<h1 class="text-4xl font-bold text-gray-900 mb-4">
+				{event.frontmatter.title}
+			</h1>
+			<div class="text-gray-600 mb-6">
+				<time datetime={event.frontmatter.date}
+					>{event.frontmatter.date}</time
+				>
+			</div>
+		</div>
+
+		<div class="prose max-w-none">
+			<Content />
+		</div>
+	</article>
+</Layout>

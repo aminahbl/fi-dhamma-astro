@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import aboutContentFi from "../content/pages/fi/about.json";
+import aboutContentEn from "../content/pages/en/about.json";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const content = lang === 'fi' ? aboutContentFi.content : aboutContentEn.content;
+
+---
+
+<Layout title={t("about.title")}>
+	<div>
+		<h1 class="text-4xl font-bold text-gray-900 mb-4">
+			{t("about.title")}
+		</h1>
+		<p class="text-xl text-gray-600 mb-8">{t("about.subtitle")}</p>
+		<div class="prose max-w-none">
+			<div id="about-content-fi" set:html={content} />
+		</div>
+	</div>
+</Layout>

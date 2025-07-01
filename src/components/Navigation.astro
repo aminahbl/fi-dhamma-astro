@@ -1,0 +1,36 @@
+---
+import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+
+// Get current path without language prefix for language switching
+const currentPath = Astro.url.pathname;
+const pathWithoutLang = currentPath.startsWith('/en') ? currentPath.slice(3) : currentPath;
+const fiPath = pathWithoutLang === '/' ? '/' : pathWithoutLang;
+const enPath = '/en' + (pathWithoutLang === '/' ? '' : pathWithoutLang);
+---
+
+<nav class="bg-white shadow-lg">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex justify-between">
+      <div class="flex space-x-7">
+        <div>
+          <a href={translatePath('/')} class="flex items-center py-4 px-2">
+            <span class="font-semibold text-gray-500 text-lg">{t('site.title')}</span>
+          </a>
+        </div>
+        <div class="hidden md:flex items-center space-x-1">
+          <a href={translatePath('/')} class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">{t('nav.home')}</a>
+          <a href={translatePath('/about')} class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">{t('nav.about')}</a>
+          <a href={translatePath('/events')} class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">{t('nav.events')}</a>
+        </div>
+      </div>
+      <div class="hidden md:flex items-center space-x-3">
+        <a href={enPath} class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-blue-500 hover:text-white transition duration-300">EN</a>
+        <a href={fiPath} class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-blue-500 hover:text-white transition duration-300">FI</a>
+      </div>
+    </div>
+  </div>
+</nav>

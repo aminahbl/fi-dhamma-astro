@@ -1,0 +1,24 @@
+{
+  "site": {
+    "title": "Dharna Finland"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "events": "Events"
+  },
+  "home": {
+    "title": "Welcome",
+    "subtitle": "Dharna Finland - Meditation and spiritual growth"
+  },
+  "about": {
+    "title": "About us",
+    "subtitle": "Learn about us and our activities"
+  },
+  "events": {
+    "title": "Events",
+    "subtitle": "Upcoming events and courses",
+    "readMore": "Read more",
+    "backToEvents": "Back to events"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "en": {
+    "content": "This content is editable via the CMS. Welcome to our multilingual website!\n\nWe're excited to showcase the power of Astro with internationalization and Decap CMS integration. This allows for easy content management across multiple languages."
+  },
+  "fi": {
+    "content": "Tämä sisältö on muokattavissa CMS:n kautta. Tervetuloa monikieliselle sivustollemme!\n\nOlemme innoissamme esitellessämme Astron voiman kansainvälistämisen ja Decap CMS -integraation kanssa. Tämä mahdollistaa helpon sisällönhallinnan useilla kielillä."
+  }
+}
